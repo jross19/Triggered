@@ -1,16 +1,20 @@
 PODS:
+  - Google-Mobile-Ads-SDK (7.37.0)
   - SwiftSoup (1.7.4)
 
 DEPENDENCIES:
+  - Google-Mobile-Ads-SDK
   - SwiftSoup
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
+    - Google-Mobile-Ads-SDK
     - SwiftSoup
 
 SPEC CHECKSUMS:
+  Google-Mobile-Ads-SDK: d028682d7450749a1955679da050eaf70d997b3e
   SwiftSoup: 92f5b348c131aed8af04f4326db1579ab19fa08c
 
-PODFILE CHECKSUM: 6d36cf7260b802cbc9f24b640fb1169c4f95ef4e
+PODFILE CHECKSUM: 1268066218962f41de91bc563647c9c45c02ec51
 
 COCOAPODS: 1.5.3
