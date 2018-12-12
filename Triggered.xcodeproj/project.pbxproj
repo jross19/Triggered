@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8A20D2BD21C15F5A004EFFCD /* Web Parse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A20D2BC21C15F5A004EFFCD /* Web Parse.swift */; };
 		FC81E7D021BF236600773A80 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC81E7CF21BF236600773A80 /* AppDelegate.swift */; };
 		FC81E7D221BF236600773A80 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC81E7D121BF236600773A80 /* ViewController.swift */; };
 		FC81E7D521BF236600773A80 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC81E7D321BF236600773A80 /* Main.storyboard */; };
@@ -18,6 +19,7 @@
 /* Begin PBXFileReference section */
 		268A98A3757E444CD5555886 /* Pods-Triggered.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Triggered.release.xcconfig"; path = "Pods/Target Support Files/Pods-Triggered/Pods-Triggered.release.xcconfig"; sourceTree = "<group>"; };
 		7E81C629F9FF5541751DC653 /* Pods_Triggered.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Triggered.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8A20D2BC21C15F5A004EFFCD /* Web Parse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Web Parse.swift"; sourceTree = "<group>"; };
 		B3E242C9A4AD4A703C317CD5 /* Pods-Triggered.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Triggered.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Triggered/Pods-Triggered.debug.xcconfig"; sourceTree = "<group>"; };
 		FC81E7CC21BF236600773A80 /* Triggered.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Triggered.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC81E7CF21BF236600773A80 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -81,6 +83,7 @@
 				FC81E7CF21BF236600773A80 /* AppDelegate.swift */,
 				FC81E7D121BF236600773A80 /* ViewController.swift */,
 				FC81E7D321BF236600773A80 /* Main.storyboard */,
+				8A20D2BC21C15F5A004EFFCD /* Web Parse.swift */,
 				FC81E7D621BF236700773A80 /* Assets.xcassets */,
 				FC81E7D821BF236800773A80 /* LaunchScreen.storyboard */,
 				FC81E7DB21BF236800773A80 /* Info.plist */,
@@ -208,6 +211,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8A20D2BD21C15F5A004EFFCD /* Web Parse.swift in Sources */,
 				FC81E7D221BF236600773A80 /* ViewController.swift in Sources */,
 				FC81E7D021BF236600773A80 /* AppDelegate.swift in Sources */,
 			);
