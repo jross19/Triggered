@@ -115,7 +115,7 @@
         <!--View Controller-->
         <scene sceneID="2V0-kR-i41">
             <objects>
-                <viewController id="qqa-Fx-Z2T" sceneMemberID="viewController">
+                <viewController id="qqa-Fx-Z2T" customClass="ViewController" customModule="Triggered" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="VSC-LA-vid">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -132,10 +132,13 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="J3l-ha-jo5"/>
                     </view>
+                    <connections>
+                        <outlet property="testView" destination="eAl-2J-kmw" id="n2Y-sT-6WR"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qQh-93-lTA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-738" y="808"/>
+            <point key="canvasLocation" x="-802" y="798"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
