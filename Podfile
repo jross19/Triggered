@@ -8,5 +8,6 @@ target 'Triggered' do
   # Pods for Triggered
 pod 'SwiftSoup'
 pod 'Google-Mobile-Ads-SDK'
+pod 'alamofire'
 
 end
