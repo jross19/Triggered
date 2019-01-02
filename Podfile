@@ -9,5 +9,6 @@ target 'Triggered' do
 pod 'SwiftSoup'
 pod 'Google-Mobile-Ads-SDK'
 pod 'Alamofire'
+pod "SwiftScraper", git: "https://github.com/cweatureapps/SwiftScraper.git"
 
 end
