@@ -18,6 +18,7 @@ class Test: UIViewController {
             let contents = try NSString(contentsOfFile: path, encoding: String.Encoding.ascii.rawValue)
             
             // Print all lines.
+            //test
             contents.enumerateLines({ (line, stop) -> () in
                 print("Line = \(line)")
                 
