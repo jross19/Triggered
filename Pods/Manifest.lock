@@ -1,24 +1,40 @@
 PODS:
   - Alamofire (4.8.0)
   - Google-Mobile-Ads-SDK (7.37.0)
+  - Observable-Swift (0.7.0)
+  - SwiftScraper (0.3.0):
+    - Observable-Swift (~> 0.7)
   - SwiftSoup (1.7.4)
 
 DEPENDENCIES:
   - Alamofire
   - Google-Mobile-Ads-SDK
+  - SwiftScraper (from `https://github.com/cweatureapps/SwiftScraper.git`)
   - SwiftSoup
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Alamofire
     - Google-Mobile-Ads-SDK
+    - Observable-Swift
     - SwiftSoup
+
+EXTERNAL SOURCES:
+  SwiftScraper:
+    :git: https://github.com/cweatureapps/SwiftScraper.git
+
+CHECKOUT OPTIONS:
+  SwiftScraper:
+    :commit: b83a6270f9037ace5a639e3741be5f29d2ad32e8
+    :git: https://github.com/cweatureapps/SwiftScraper.git
 
 SPEC CHECKSUMS:
   Alamofire: 3ec537f71edc9804815215393ae2b1a8ea33a844
   Google-Mobile-Ads-SDK: d028682d7450749a1955679da050eaf70d997b3e
+  Observable-Swift: 8725f501976e49db368a2cd37277d17a9a51a8aa
+  SwiftScraper: 708bf2b9396fd396f48c379c58c4617dd7cf9dfe
   SwiftSoup: 92f5b348c131aed8af04f4326db1579ab19fa08c
 
-PODFILE CHECKSUM: 989809bffad4b013bcb309107f20cabef042fcc2
+PODFILE CHECKSUM: 6e32831006f8bcd1898c01c1e7c7b7021d277ad7
 
 COCOAPODS: 1.5.3

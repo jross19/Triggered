@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "D836BA86E4760640A1BD9C825858D26D"
-               BlueprintName = "Pods-Triggered"
+               BlueprintIdentifier = "E235053ACCD571A4C9B0CD727F459625"
+               BlueprintName = "SwiftScraper"
                ReferencedContainer = "container:Pods.xcodeproj"
-               BuildableName = "Pods-Triggered.framework">
+               BuildableName = "SwiftScraper.framework">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>

@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "D836BA86E4760640A1BD9C825858D26D"
-               BlueprintName = "Pods-Triggered"
+               BlueprintIdentifier = "5DDD85C96C0CF09D17458175D8F9E187"
+               BlueprintName = "Observable-Swift"
                ReferencedContainer = "container:Pods.xcodeproj"
-               BuildableName = "Pods-Triggered.framework">
+               BuildableName = "Observable-Swift.framework">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
