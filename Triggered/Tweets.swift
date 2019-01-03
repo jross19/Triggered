@@ -8,6 +8,8 @@
 
 import Foundation
 
-class profiles {
-    var twitterProfile: String[] 
+struct profile {
+    var profileName: String
+    var profileLink: String
+    var party: String
 }

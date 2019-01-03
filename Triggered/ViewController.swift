@@ -13,6 +13,9 @@ import Alamofire
 
 class ViewController: UIViewController {
     
+    var twitterProfileList: [profile] =
+        [profile(profileName: "@realDonaldTrump", profileLink: "https://twitter.com/realDonaldTrump?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor", party: "Republican")]
+    
     override func viewDidLoad() {
         
     }
