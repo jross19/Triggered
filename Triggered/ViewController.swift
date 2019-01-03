@@ -9,6 +9,7 @@
 import UIKit
 import SwiftSoup //This is a module for Web Scraping
 import Alamofire
+//import SwiftScraper
 
 class ViewController: UIViewController {
     
@@ -27,7 +28,17 @@ class ViewController: UIViewController {
     }
     
     func parseHTML(html: String) -> Void {
-        // Finish this next
+        do{
+            let html = "<html><head><title>First parse</title></head>"
+                + "<body><p>Parsed HTML into a doc.</p></body></html>"
+            let doc: Document = try SwiftSoup.parse(html)
+            return try doc.text()
+        }catch Exception.Error(let type, let message)
+        {
+            print("")
+        }catch{
+            print("")
+        }
     }
     
 }

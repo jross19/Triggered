@@ -8,6 +8,6 @@
 
 import Foundation
 
-/*class Tweets { The basis for what the array will store
+class profiles {
+    var twitterProfile: String[] 
 }
-*/
