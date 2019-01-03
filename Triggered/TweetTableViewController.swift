@@ -29,13 +29,13 @@ class TweetTableViewController: UITableViewController {
     }
 
     
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+  /*  override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "TwitterProfileCell", for: indexPath)
         let profile = twitterProfileList[indexPath.row]
         cell.textLabel?.text = "\(profile.profileName) - \(profile.party)"
         cell.detailTextLabel?.text = 
         return cell
-    }
+    } */
     
 
     /*

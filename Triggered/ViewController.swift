@@ -11,6 +11,7 @@ import SwiftSoup //This is a module for Web Scraping
 //import SwiftScraper
 
 class ViewController: UIViewController {
+    @IBOutlet weak var textView: UITextView!
     
     var twitterProfileList: [profile] =
         [profile(profileName: "@realDonaldTrump", profileLink: "https://twitter.com/realDonaldTrump?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor", party: "Republican")]
@@ -41,6 +42,9 @@ class ViewController: UIViewController {
                 do {
                     let text = try element?.text()
                     print(text)
+                    if let testText = text {
+                        textView.text = String(testText)
+                    }
                 }catch{
                     
                 }
