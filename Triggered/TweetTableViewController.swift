@@ -9,10 +9,9 @@
 import UIKit
 
 class TweetTableViewController: UITableViewController {
-
+    var twitterProfileList: [profile] =
+        [profile(profileName: "@realDonaldTrump", profileLink: "https://twitter.com/realDonaldTrump?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor", party: "Republican")]
    
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -22,28 +21,22 @@ class TweetTableViewController: UITableViewController {
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
-
-    // MARK: - Table view data source
-
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
-    }
+   
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
         return 0
     }
 
-    /*
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
-        // Configure the cell...
-
+        let cell = tableView.dequeueReusableCell(withIdentifier: "TwitterProfileCell", for: indexPath)
+        let profile = twitterProfileList[indexPath.row]
+        cell.textLabel?.text = "\(profile.profileName) - \(profile.party)"
+        cell.detailTextLabel?.text = 
         return cell
     }
-    */
+    
 
     /*
     // Override to support conditional editing of the table view.
