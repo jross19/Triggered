@@ -10,6 +10,10 @@ import UIKit
 
 class Test: UIViewController {
     override func viewDidLoad() {
+<<<<<<< HEAD
         
         }
+=======
+    
+>>>>>>> adae0b69d4d1cec459c17bf1c895c94b113bf8d3
     }
