@@ -10,19 +10,6 @@ import UIKit
 
 class Test: UIViewController {
     override func viewDidLoad() {
-        // File path (change this).
-        let path = "Desktop/Democrat/Republican.txt"
         
-        do {
-            // Read an entire text file into an NSString.
-            let contents = try NSString(contentsOfFile: path, encoding: String.Encoding.ascii.rawValue)
-            
-            // Print all lines.
-            //test
-            contents.enumerateLines({ (line, stop) -> () in
-                print("Line = \(line)")
-                
-            })
         }
     }
-}

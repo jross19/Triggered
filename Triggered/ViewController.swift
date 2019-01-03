@@ -8,7 +8,6 @@
 
 import UIKit
 import SwiftSoup //This is a module for Web Scraping
-import Alamofire
 //import SwiftScraper
 
 class ViewController: UIViewController {
@@ -16,32 +15,44 @@ class ViewController: UIViewController {
     var twitterProfileList: [profile] =
         [profile(profileName: "@realDonaldTrump", profileLink: "https://twitter.com/realDonaldTrump?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor", party: "Republican")]
     
+    var htmlContent = "" //html crap
+    
     override func viewDidLoad() {
+        let myURLString = "https://twitter.com/realDonaldTrump"
+        guard let myURL = URL(string: myURLString) else {
+            print("Error: \(myURLString) doesn't seem to be a valid URL")
+            return
+        }
         
-    }
-    
-    // Grabs the HTML from nycmetalscene.com for parsing.
-    func scrapeNYCMetalScene() -> Void {
-        Alamofire.request("http://nycmetalscene.com").responseString { response in
-            print("\(response.result.isSuccess)")
-            if let html = response.result.value {
-                self.parseHTML(html: html)
+        do {
+            htmlContent = try String(contentsOf: myURL, encoding: .ascii)
+            print("HTML : \(htmlContent)")
+        } catch let error {
+            print("Error: \(error)")
+        }
+        
+        
+        do {
+            
+            let doc = try SwiftSoup.parse(htmlContent)
+            do{
+                
+                let element = try doc.select("title").first()
+                do {
+                    let text = try element?.text()
+                    print(text)
+                }catch{
+                    
+                }
+            }catch{
             }
+            
+        }catch{
+            
         }
     }
     
-    func parseHTML(html: String) -> Void {
-        do{
-            let html = "<html><head><title>First parse</title></head>"
-                + "<body><p>Parsed HTML into a doc.</p></body></html>"
-            let doc: Document = try SwiftSoup.parse(html)
-            return try doc.text()
-        }catch Exception.Error(let type, let message)
-        {
-            print("")
-        }catch{
-            print("")
-        }
-    }
+    
+    
     
 }
