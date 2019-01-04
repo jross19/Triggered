@@ -19,7 +19,7 @@ class ViewController: UIViewController {
     var htmlContent = "" //html crap
     
     override func viewDidLoad() {
-        let myURLString = "https://twitter.com/realDonaldTrump"
+        let myURLString = "https://twitter.com/realdonaldtrump"
         guard let myURL = URL(string: myURLString) else {
             print("Error: \(myURLString) doesn't seem to be a valid URL")
             return
@@ -27,7 +27,7 @@ class ViewController: UIViewController {
         
         do {
             htmlContent = try String(contentsOf: myURL, encoding: .ascii)
-            print("HTML : \(htmlContent)")
+            //print("HTML : \(htmlContent)")
         } catch let error {
             print("Error: \(error)")
         }
@@ -38,12 +38,15 @@ class ViewController: UIViewController {
             let doc = try SwiftSoup.parse(htmlContent)
             do{
                 
-                let element = try doc.select("title").first()
+                let element = try doc.select("p").array()
+                let element2 = try doc.select("title").first()
+                let element3 = try doc.select("img").array()
                 do {
-                    let text = try element?.text()
+                    let text = try element[4].text()
+                    let text2 = try element2?.text()
                     print(text)
-                    if let testText = text {
-                        textView.text = String(testText)
+                    if let testText = text2 {
+                        textView.text = String("\(text) - \(testText)")
                     }
                 }catch{
                     
