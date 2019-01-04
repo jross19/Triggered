@@ -10,7 +10,7 @@ import UIKit
 
 class TweetTableViewController: UITableViewController {
     var twitterProfileList: [profile] =
-        [profile(profileName: "@realDonaldTrump", profileLink: "https://twitter.com/realDonaldTrump?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor", party: "Republican")]
+        [profile(profileName: "@realDonaldTrump", profileLink: "https://twitter.com/realDonaldTrump", party: "Republican")]
    
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,8 +24,8 @@ class TweetTableViewController: UITableViewController {
    
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 0
+        let cell = tableView.dequeueReusableCell(withIdentifier: "TwitterProfileCell")
+            }
     }
 
     
