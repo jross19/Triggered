@@ -23,10 +23,10 @@ class TweetTableViewController: UITableViewController {
     }
    
 
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    /*override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         let cell = tableView.dequeueReusableCell(withIdentifier: "TwitterProfileCell")
             }
-    }
+    } */
 
     
   /*  override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
