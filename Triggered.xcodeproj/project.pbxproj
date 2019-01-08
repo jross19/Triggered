@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		054BB8C86ED5390D0A4599BF /* Pods_Triggered.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F17E16249A56B9B877C00F14 /* Pods_Triggered.framework */; };
+		8A00A05421E52FA70013C491 /* TweetsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A00A05321E52FA70013C491 /* TweetsTableViewController.swift */; };
 		8A20D2BD21C15F5A004EFFCD /* Web Parse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A20D2BC21C15F5A004EFFCD /* Web Parse.swift */; };
 		8A67502921DE73670095CE2A /* Tweets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A67502821DE73670095CE2A /* Tweets.swift */; };
 		AFDA788B21C2CA4C00FC3BCC /* ProfileTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFDA788A21C2CA4C00FC3BCC /* ProfileTableViewController.swift */; };
@@ -22,6 +23,7 @@
 
 /* Begin PBXFileReference section */
 		81600870C4E7F771F5BF7204 /* Pods-Triggered.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Triggered.release.xcconfig"; path = "Pods/Target Support Files/Pods-Triggered/Pods-Triggered.release.xcconfig"; sourceTree = "<group>"; };
+		8A00A05321E52FA70013C491 /* TweetsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetsTableViewController.swift; sourceTree = "<group>"; };
 		8A20D2BC21C15F5A004EFFCD /* Web Parse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Web Parse.swift"; sourceTree = "<group>"; };
 		8A67502821DE73670095CE2A /* Tweets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tweets.swift; sourceTree = "<group>"; };
 		AFDA788A21C2CA4C00FC3BCC /* ProfileTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTableViewController.swift; sourceTree = "<group>"; };
@@ -92,6 +94,7 @@
 				FC81E7D121BF236600773A80 /* ViewController.swift */,
 				FC81E7D621BF236700773A80 /* Assets.xcassets */,
 				AFDA788A21C2CA4C00FC3BCC /* ProfileTableViewController.swift */,
+				8A00A05321E52FA70013C491 /* TweetsTableViewController.swift */,
 				AFDA788C21C2CDC400FC3BCC /* TwitterProfiles.swift */,
 				8A67502821DE73670095CE2A /* Tweets.swift */,
 				AFDA788E21C2D09A00FC3BCC /* Test.swift */,
@@ -228,6 +231,7 @@
 				FC81E7D221BF236600773A80 /* ViewController.swift in Sources */,
 				AFDA788D21C2CDC400FC3BCC /* TwitterProfiles.swift in Sources */,
 				8A67502921DE73670095CE2A /* Tweets.swift in Sources */,
+				8A00A05421E52FA70013C491 /* TweetsTableViewController.swift in Sources */,
 				FC81E7D021BF236600773A80 /* AppDelegate.swift in Sources */,
 				AFDA788F21C2D09A00FC3BCC /* Test.swift in Sources */,
 			);

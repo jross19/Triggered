@@ -49,7 +49,7 @@ class ViewController: UIViewController {
                         let text = try element[x].text()
                         print(text)
                         thing.append("<> \(text)")
-                        textView.text = thing
+                        //textView.text = thing
                         x = x + 1
                     }
                     }
