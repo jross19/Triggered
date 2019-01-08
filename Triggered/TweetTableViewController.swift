@@ -21,21 +21,34 @@ class TweetTableViewController: UITableViewController {
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
-   
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "TwitterProfileCell", for: indexPath)
+        let profile = twitterProfileList[indexPath.row]
+        cell.textLabel?.text = "\(profile.profileName) - \(profile.party)"
+        cell.detailTextLabel?.text = profile.profileLink
+        return cell
+    }
+    
+    override func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
 
+<<<<<<< HEAD
     /*override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         let cell = tableView.dequeueReusableCell(withIdentifier: "TwitterProfileCell")
+=======
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        if section == 0 {
+        return twitterProfileList.count
+        } else {
+            return 0
+        }
+>>>>>>> c1d69eb6d799c13172ba84feba2427384d082c86
             }
     } */
 
     
-  /*  override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "TwitterProfileCell", for: indexPath)
-        let profile = twitterProfileList[indexPath.row]
-        cell.textLabel?.text = "\(profile.profileName) - \(profile.party)"
-        cell.detailTextLabel?.text = 
-        return cell
-    } */
+
     
 
     /*
@@ -83,4 +96,4 @@ class TweetTableViewController: UITableViewController {
     }
     */
 
-}
+
