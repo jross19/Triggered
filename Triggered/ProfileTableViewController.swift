@@ -1,5 +1,5 @@
 //
-//  TweetTableViewController.swift
+//  ProfileTableViewController.swift
 //  Triggered
 //
 //  Created by Nicholas Stearns on 12/13/18.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class TweetTableViewController: UITableViewController {
+class ProfileTableViewController: UITableViewController {
     var twitterProfileList: [profile] =
         [profile(profileName: "@realDonaldTrump", profileLink: "https://twitter.com/realDonaldTrump", party: "Republican")]
    
@@ -33,17 +33,15 @@ class TweetTableViewController: UITableViewController {
         return 1
     }
 
-<<<<<<< HEAD
     /*override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         let cell = tableView.dequeueReusableCell(withIdentifier: "TwitterProfileCell")
-=======
+
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if section == 0 {
         return twitterProfileList.count
         } else {
             return 0
         }
->>>>>>> c1d69eb6d799c13172ba84feba2427384d082c86
             }
     } */
 
@@ -96,4 +94,4 @@ class TweetTableViewController: UITableViewController {
     }
     */
 
-
+}
