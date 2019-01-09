@@ -13,6 +13,7 @@ class TweetsTableViewController: UITableViewController {
     
     var htmlContent = "" //html crap
     var testUserName = "realDonaldTrump"
+    var tweetArray: [String] = [""]
     
     func webScrape(userName: String) {
         let myURLString = "https://twitter.com/\(userName))"
@@ -44,8 +45,7 @@ class TweetsTableViewController: UITableViewController {
                     while (x <= 6) {
                         let text = try element[x].text()
                         //print(text)
-                        thing.append("<> \(text)")
-                        print(thing)
+                        tweetArray.append(text)
                         //textView.text = thing
                         x = x + 1
                     }
@@ -65,7 +65,6 @@ class TweetsTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         webScrape(userName: testUserName)
-
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
