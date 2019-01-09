@@ -26,7 +26,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="68" height="30"/>
                                         <state key="normal" title="Democrat"/>
                                         <connections>
-                                            <segue destination="07J-co-9Cn" kind="show" id="1eu-hV-FbW"/>
+                                            <segue destination="vuH-ow-Kfm" kind="show" id="tDp-1L-i3q"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -39,7 +39,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="76" height="30"/>
                                         <state key="normal" title="Republican"/>
                                         <connections>
-                                            <segue destination="07J-co-9Cn" kind="show" id="ICy-vK-CZj"/>
+                                            <segue destination="vuH-ow-Kfm" kind="show" id="30s-76-cKz"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -67,35 +67,32 @@
             <point key="canvasLocation" x="-6" y="150"/>
         </scene>
         <!--Profile Table View Controller-->
-        <scene sceneID="fkf-tH-UXK">
+        <scene sceneID="9RB-eI-xdm">
             <objects>
-                <tableViewController id="07J-co-9Cn" customClass="ProfileTableViewController" customModule="Triggered" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="xq7-jm-5ro">
+                <tableViewController id="vuH-ow-Kfm" customClass="ProfileTableViewController" customModule="Triggered" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="tpA-yE-Pbz">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="TwitterProfileCell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="30" reuseIdentifier="TwitterProfileCell" rowHeight="45" id="coM-2S-WSO">
-                                <rect key="frame" x="0.0" y="28" width="375" height="45"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="aqV-0K-AEc">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="coM-2S-WSO" id="A3E-33-NUA">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="44.5"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="aqV-0K-AEc" id="Zbf-21-ODj">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
-                                <connections>
-                                    <segue destination="tJb-2n-kE3" kind="show" id="Gfq-RN-aJA"/>
-                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
-                            <outlet property="dataSource" destination="07J-co-9Cn" id="8xI-Xb-jbb"/>
-                            <outlet property="delegate" destination="07J-co-9Cn" id="bcp-FC-Qc2"/>
+                            <outlet property="dataSource" destination="vuH-ow-Kfm" id="CEb-3c-drK"/>
+                            <outlet property="delegate" destination="vuH-ow-Kfm" id="mlf-gr-mkd"/>
                         </connections>
                     </tableView>
                 </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="3Cs-ar-1n0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LK1-gn-D7e" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="764" y="149.77511244377811"/>
+            <point key="canvasLocation" x="732" y="150"/>
         </scene>
         <!--Tweets Table View Controller-->
         <scene sceneID="6bD-bH-cxK">
@@ -178,6 +175,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="ICy-vK-CZj"/>
+        <segue reference="tDp-1L-i3q"/>
     </inferredMetricsTieBreakers>
 </document>
