@@ -10,7 +10,7 @@ import UIKit
 
 class ProfileTableViewController: UITableViewController {
     var twitterProfileList: [profile] =
-        [profile(profileName: "@realDonaldTrump", profileLink: "https://twitter.com/realDonaldTrump", party: "Republican")]
+        [profile(profileName: "@realDonaldTrump", party: "Republican")]
    
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,13 +26,26 @@ class ProfileTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "TwitterProfileCell", for: indexPath)
         let profile = twitterProfileList[indexPath.row]
         cell.textLabel?.text = "\(profile.profileName) - \(profile.party)"
-        cell.detailTextLabel?.text = profile.profileLink
         return cell
     }
+    
+    
     
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
+    
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        if section == 0 {
+            return twitterProfileList.count
+        } else {
+            return 0
+        }
+    }
+}
+
+    /*override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "TwitterProfileCell")
 
     /*override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         let cell = tableView.dequeueReusableCell(withIdentifier: "TwitterProfileCell")
@@ -94,5 +107,8 @@ class ProfileTableViewController: UITableViewController {
         // Pass the selected object to the new view controller.
     }
     */
+<<<<<<< HEAD:Triggered/ProfileTableViewController.swift
+=======
 
 }
+>>>>>>> 888710fc008f2e37b779a42a6da7e2dad291f736:Triggered/ProfileTableViewController.swift
