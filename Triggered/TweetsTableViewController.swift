@@ -35,19 +35,13 @@ class TweetsTableViewController: UITableViewController {
             let doc = try SwiftSoup.parse(htmlContent)
             do{
                 
-                let element = try doc.select("p").array()
-                let element2 = try doc.select("title").first()
-                let element3 = try doc.select("img").array()
+                let tweetTextArray = try doc.select("p").array()
                 do {
-                    var x = 4
-                    
-                    var thing = ""
-                    while (x <= 6) {
-                        let text = try element[x].text()
-                        //print(text)
+                    var tweetNumber = 4 //the first number in the array
+                    while (tweetNumber <= 6) {
+                        let text = try tweetTextArray[tweetNumber].text()
                         tweetArray.append(text)
-                        //textView.text = thing
-                        x = x + 1
+                        tweetNumber += 1
                     }
                 }
             }catch{

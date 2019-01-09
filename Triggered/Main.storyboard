@@ -13,58 +13,60 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Triggered" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="UKz-FK-QoR">
-                                <rect key="frame" x="164" y="318" width="68" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ral-Ox-lro">
-                                        <rect key="frame" x="0.0" y="0.0" width="68" height="30"/>
-                                        <state key="normal" title="Democrat"/>
-                                        <connections>
-                                            <segue destination="vuH-ow-Kfm" kind="show" id="tDp-1L-i3q"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                            </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="d0L-5w-zI4">
-                                <rect key="frame" x="164" y="445" width="76" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZUu-t2-wHR">
-                                        <rect key="frame" x="0.0" y="0.0" width="76" height="30"/>
-                                        <state key="normal" title="Republican"/>
-                                        <connections>
-                                            <segue destination="vuH-ow-Kfm" kind="show" id="30s-76-cKz"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                            </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="peH-lZ-iu7">
-                                <rect key="frame" x="78" y="98" width="240" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <subviews>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" text="What Party do you align with?" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="9fH-eR-GAM">
-                                        <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                    </textView>
-                                </subviews>
-                            </stackView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="What Party do you align with?" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="9fH-eR-GAM">
+                                <rect key="frame" x="78" y="106" width="219" height="74"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="74" id="J5j-ZR-S9A"/>
+                                    <constraint firstAttribute="width" constant="219" id="dC7-qI-Zx5"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZUu-t2-wHR">
+                                <rect key="frame" x="69.5" y="413" width="236" height="205"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="204.80000000000001" id="14h-3v-2KB"/>
+                                    <constraint firstAttribute="width" constant="235.80000000000001" id="A9o-nE-s1u"/>
+                                </constraints>
+                                <state key="normal" title="Republican" image="Republicanlogo.svg"/>
+                                <connections>
+                                    <segue destination="vuH-ow-Kfm" kind="show" id="30s-76-cKz"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ral-Ox-lro">
+                                <rect key="frame" x="62" y="151" width="235" height="231"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="400" id="0nK-5i-ewM"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="200" id="Jnb-ks-fDC"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="220" id="VA9-Zc-iFg"/>
+                                    <constraint firstAttribute="width" constant="440" id="oRE-cR-zHQ"/>
+                                </constraints>
+                                <state key="normal" title="Democrat" image="democratic-donkey-vector-logo"/>
+                                <connections>
+                                    <segue destination="vuH-ow-Kfm" kind="show" id="tDp-1L-i3q"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="9fH-eR-GAM" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Jcq-uF-1YQ"/>
+                            <constraint firstItem="ZUu-t2-wHR" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="R31-90-kVw"/>
+                            <constraint firstItem="9fH-eR-GAM" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="78" id="b3A-zj-iDN"/>
+                            <constraint firstItem="9fH-eR-GAM" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="42" id="n6I-Xc-Pad"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="5ir-ar-d8f"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-6" y="150"/>
+            <point key="canvasLocation" x="-7.2000000000000002" y="149.77511244377811"/>
         </scene>
         <!--Profile Table View Controller-->
         <scene sceneID="9RB-eI-xdm">
@@ -140,41 +142,12 @@
             </objects>
             <point key="canvasLocation" x="-782" y="150"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="2V0-kR-i41">
-            <objects>
-                <viewController id="qqa-Fx-Z2T" customClass="ViewController" customModule="Triggered" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="VSC-LA-vid">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="eAl-2J-kmw">
-                                <rect key="frame" x="67" y="269" width="240" height="128"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="eAl-2J-kmw" firstAttribute="top" secondItem="J3l-ha-jo5" secondAttribute="top" constant="249" id="2u8-cI-Q3b"/>
-                            <constraint firstItem="eAl-2J-kmw" firstAttribute="leading" secondItem="J3l-ha-jo5" secondAttribute="leading" constant="67" id="j9G-J6-1Ap"/>
-                            <constraint firstItem="J3l-ha-jo5" firstAttribute="trailing" secondItem="eAl-2J-kmw" secondAttribute="trailing" constant="68" id="nih-u5-7Lj"/>
-                            <constraint firstItem="J3l-ha-jo5" firstAttribute="bottom" secondItem="eAl-2J-kmw" secondAttribute="bottom" constant="270" id="yZ7-bu-tj3"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="J3l-ha-jo5"/>
-                    </view>
-                    <connections>
-                        <outlet property="textView" destination="eAl-2J-kmw" id="vUw-Ng-W4V"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="qQh-93-lTA" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-884" y="843"/>
-        </scene>
     </scenes>
+    <resources>
+        <image name="Republicanlogo.svg" width="1179" height="1024"/>
+        <image name="democratic-donkey-vector-logo" width="800" height="800"/>
+    </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="tDp-1L-i3q"/>
+        <segue reference="30s-76-cKz"/>
     </inferredMetricsTieBreakers>
 </document>
