@@ -105,10 +105,5 @@ class ProfileTableViewController: UITableViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
-    }
-    */
-<<<<<<< HEAD:Triggered/ProfileTableViewController.swift
-=======
-
-}
->>>>>>> 888710fc008f2e37b779a42a6da7e2dad291f736:Triggered/ProfileTableViewController.swift
+    }*/
+ }*/
