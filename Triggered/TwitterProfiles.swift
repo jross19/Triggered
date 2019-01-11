@@ -10,6 +10,5 @@ import Foundation
 
 struct profile {
     var profileName: String
-    //var profileLink: String
     var party: String
 }
