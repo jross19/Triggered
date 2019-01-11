@@ -11,12 +11,14 @@ import SwiftSoup
 
 class TweetsTableViewController: UITableViewController {
     
+    var tweetsArray: [Tweets] = [Tweets(tweetText:]
+    
     var htmlContent = "" //html crap
     var testUserName = "realDonaldTrump"
     var tweetArray: [String] = [""]
     
     func webScrape(userName: String) {
-        let myURLString = "https://twitter.com/\(userName))"
+        let myURLString = "https://twitter.com/\(userName)"
         guard let myURL = URL(string: myURLString) else {
             print("Error: \(myURLString) doesn't seem to be a valid URL")
             return
@@ -36,7 +38,11 @@ class TweetsTableViewController: UITableViewController {
                 let tweetTextArray = try doc.select("p").array()
                 do {
                     var tweetNumber = 4 //the first number in the array
-                    print(tweetTextArray[4])
+                    while (tweetNumber <= 6) {
+                        let text = try tweetTextArray[tweetNumber].text()
+                        tweetArray.append(text)
+                        tweetNumber += 1
+                    }
                 }
             }
             catch {
@@ -52,34 +58,36 @@ class TweetsTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         //webScrape(userName: testUserName)
+        
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
-
-    // MARK: - Table view data source
-
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
-    }
-
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 0
-    }
-
-    /*
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
-        // Configure the cell...
-
+   /* override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "TwitterProfileCell", for: indexPath)
+        let profile = twitterProfileList[indexPath.row]
+        cell.textLabel?.text = "\(profile.profileName) - \(profile.party)"
         return cell
+        
+    }*/
+    
+    
+    
+    override func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
     }
-    */
+    
+    /*override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        if section == 0 {
+            return .count
+        } else {
+            return 0
+        }
+    }
+}*/
+   
 
     /*
     // Override to support conditional editing of the table view.

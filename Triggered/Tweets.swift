@@ -8,3 +8,6 @@
 
 import Foundation
 
+struct Tweets {
+    var tweetText: String
+}
