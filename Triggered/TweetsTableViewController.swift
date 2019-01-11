@@ -38,7 +38,15 @@ class TweetsTableViewController: UITableViewController {
                 do {
                     var tweetNumber = 4 //the first number in the array
                     while (tweetNumber <= ((tweetTextArray.count) - 20)) {
-                        let text = try tweetTextArray[tweetNumber].text()
+                        var text = try tweetTextArray[tweetNumber].text()
+                        
+                            //replaces â with a quote
+                            if text.contains("â")
+                            {
+                                text = text.replacingOccurrences(of: "â", with: "\"", options: .literal, range: nil)
+                            }
+                            
+                        
                         tweetArray.append(text)
                         tweetNumber += 1
                     }
