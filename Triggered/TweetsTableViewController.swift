@@ -31,10 +31,8 @@ class TweetsTableViewController: UITableViewController {
         
         
         do {
-            
             let doc = try SwiftSoup.parse(htmlContent)
-            do{
-                
+            do {
                 let tweetTextArray = try doc.select("p").array()
                 do {
                     var tweetNumber = 4 //the first number in the array
@@ -44,13 +42,12 @@ class TweetsTableViewController: UITableViewController {
                         tweetNumber += 1
                     }
                 }
-            }catch{
+            }
+            catch {
                 
             }
-            catch{
-            }
-            
-        }catch{
+        }
+        catch {
             
         }
     }
