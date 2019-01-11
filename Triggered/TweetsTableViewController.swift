@@ -37,11 +37,12 @@ class TweetsTableViewController: UITableViewController {
                 let tweetTextArray = try doc.select("p").array()
                 do {
                     var tweetNumber = 4 //the first number in the array
-                    while (tweetNumber <= 6) {
+                    while (tweetNumber <= ((tweetTextArray.count) - 20)) {
                         let text = try tweetTextArray[tweetNumber].text()
                         tweetArray.append(text)
                         tweetNumber += 1
                     }
+                    tweetArray.remove(at: 0)
                 }
             }
             catch {
@@ -66,7 +67,7 @@ class TweetsTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "tweetCell", for: indexPath)
         let profile = tweetArray[indexPath.row]
-        cell.textLabel?.text = "\(tweetArray[1])"
+        cell.textLabel?.text = "\(tweetArray[(indexPath.row)])"
         return cell
         
     }
