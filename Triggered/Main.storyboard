@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ztQ-V0-Fxx">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ztQ-V0-Fxx">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -26,7 +26,7 @@
                                 </constraints>
                                 <state key="normal" title="Democrat" image="democratic-donkey-vector-logo"/>
                                 <connections>
-                                    <segue destination="vuH-ow-Kfm" kind="show" id="tDp-1L-i3q"/>
+                                    <segue destination="W9q-iq-Dh4" kind="show" id="oFz-vq-5fe"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZUu-t2-wHR">
@@ -36,9 +36,6 @@
                                     <constraint firstAttribute="height" constant="205" id="ggX-K2-7Nt"/>
                                 </constraints>
                                 <state key="normal" title="Republican" image="Republicanlogo.svg"/>
-                                <connections>
-                                    <segue destination="vuH-ow-Kfm" kind="show" id="30s-76-cKz"/>
-                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -57,36 +54,40 @@
             <point key="canvasLocation" x="-7.2000000000000002" y="149.77511244377811"/>
         </scene>
         <!--Profile Table View Controller-->
-        <scene sceneID="9RB-eI-xdm">
+        <scene sceneID="rw6-lc-jx2">
             <objects>
-                <tableViewController id="vuH-ow-Kfm" customClass="ProfileTableViewController" customModule="Triggered" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="tpA-yE-Pbz">
+                <tableViewController id="W9q-iq-Dh4" customClass="ProfileTableViewController" customModule="Triggered" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Jye-LO-WNH">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="aqV-0K-AEc">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="TwitterProfileCell" id="Kv9-Uk-Rhc">
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="aqV-0K-AEc" id="Zbf-21-ODj">
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Kv9-Uk-Rhc" id="oae-TX-KHw">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="tJb-2n-kE3" kind="show" id="kJy-Cn-DSQ"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
-                            <outlet property="dataSource" destination="vuH-ow-Kfm" id="CEb-3c-drK"/>
-                            <outlet property="delegate" destination="vuH-ow-Kfm" id="mlf-gr-mkd"/>
+                            <outlet property="dataSource" destination="W9q-iq-Dh4" id="ujC-Es-S6B"/>
+                            <outlet property="delegate" destination="W9q-iq-Dh4" id="6V8-CE-rSD"/>
                         </connections>
                     </tableView>
                 </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="LK1-gn-D7e" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eOz-FN-Uia" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="732" y="150"/>
+            <point key="canvasLocation" x="734" y="150"/>
         </scene>
         <!--Tweets Table View Controller-->
         <scene sceneID="6bD-bH-cxK">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bO0-hB-I2K" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tableViewController id="tJb-2n-kE3" customClass="TweetsTableViewController" customModule="Triggered" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="9d1-ku-GnM">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
@@ -108,7 +109,6 @@
                         </connections>
                     </tableView>
                 </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="bO0-hB-I2K" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1481" y="150"/>
         </scene>
@@ -135,7 +135,4 @@
         <image name="Republicanlogo.svg" width="1179" height="1024"/>
         <image name="democratic-donkey-vector-logo" width="800" height="800"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="tDp-1L-i3q"/>
-    </inferredMetricsTieBreakers>
 </document>

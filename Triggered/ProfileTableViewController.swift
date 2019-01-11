@@ -27,6 +27,7 @@ class ProfileTableViewController: UITableViewController {
         let profile = twitterProfileList[indexPath.row]
         cell.textLabel?.text = "\(profile.profileName) - \(profile.party)"
         return cell
+     
     }
     
     
@@ -43,21 +44,6 @@ class ProfileTableViewController: UITableViewController {
         }
     }
 }
-
-    /*override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "TwitterProfileCell")
-
-    /*override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "TwitterProfileCell")
-
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if section == 0 {
-        return twitterProfileList.count
-        } else {
-            return 0
-        }
-            }
-    } */
 
     
 
@@ -106,5 +92,4 @@ class ProfileTableViewController: UITableViewController {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
     }
- */
  */

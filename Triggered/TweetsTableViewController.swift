@@ -36,11 +36,7 @@ class TweetsTableViewController: UITableViewController {
                 let tweetTextArray = try doc.select("p").array()
                 do {
                     var tweetNumber = 4 //the first number in the array
-                    while (tweetNumber <= 6) {
-                        let text = try tweetTextArray[tweetNumber].text()
-                        tweetArray.append(text)
-                        tweetNumber += 1
-                    }
+                    print(tweetTextArray[4])
                 }
             }
             catch {
@@ -55,7 +51,7 @@ class TweetsTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        webScrape(userName: testUserName)
+        //webScrape(userName: testUserName)
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
