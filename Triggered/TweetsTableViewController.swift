@@ -11,8 +11,7 @@ import SwiftSoup
 
 class TweetsTableViewController: UITableViewController {
     
-    var tweetsArray: [Tweets] = [Tweets(tweetText:]
-    
+    var tweetsArray: [String] = []
     var htmlContent = "" //html crap
     var testUserName = "realDonaldTrump"
     var tweetArray: [String] = [""]
@@ -57,21 +56,21 @@ class TweetsTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        //webScrape(userName: testUserName)
-        
+        webScrape(userName: testUserName)
+        tweetsArray.append(tweetArray[1])
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
-   /* override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "TwitterProfileCell", for: indexPath)
-        let profile = twitterProfileList[indexPath.row]
-        cell.textLabel?.text = "\(profile.profileName) - \(profile.party)"
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "tweetCell", for: indexPath)
+        let profile = tweetsArray[indexPath.row]
+        cell.textLabel?.text = "\(tweetsArray[0])"
         return cell
         
-    }*/
+    }
     
     
     
@@ -79,14 +78,14 @@ class TweetsTableViewController: UITableViewController {
         return 1
     }
     
-    /*override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if section == 0 {
-            return .count
+            return tweetsArray.count
         } else {
             return 0
         }
     }
-}*/
+}
    
 
     /*
@@ -134,4 +133,4 @@ class TweetsTableViewController: UITableViewController {
     }
     */
 
-}
+
