@@ -57,7 +57,6 @@ class TweetsTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         webScrape(userName: testUserName)
-        tweetsArray.append(tweetArray[1])
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -66,8 +65,8 @@ class TweetsTableViewController: UITableViewController {
     }
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "tweetCell", for: indexPath)
-        let profile = tweetsArray[indexPath.row]
-        cell.textLabel?.text = "\(tweetsArray[0])"
+        let profile = tweetArray[indexPath.row]
+        cell.textLabel?.text = "\(tweetArray[1])"
         return cell
         
     }
@@ -80,7 +79,7 @@ class TweetsTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if section == 0 {
-            return tweetsArray.count
+            return tweetArray.count
         } else {
             return 0
         }
