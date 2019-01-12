@@ -9,8 +9,10 @@
 import UIKit
 
 class ProfileTableViewController: UITableViewController {
+    var selectedRow = 0
+    
     var twitterProfileList: [profile] =
-        [profile(profileName: "@realDonaldTrump", party: "Republican")]
+        getRepublicanProfiles()
    
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,7 +27,9 @@ class ProfileTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "TwitterProfileCell", for: indexPath)
         let profile = twitterProfileList[indexPath.row]
-        cell.textLabel?.text = "\(profile.profileName) - \(profile.party)"
+        cell.imageView?.image = UIImage(named: profile.profileImage)
+        cell.textLabel?.text = "\(profile.profileName)"
+        cell.detailTextLabel?.text = "\(profile.party)"
         return cell
      
     }
@@ -42,6 +46,22 @@ class ProfileTableViewController: UITableViewController {
         } else {
             return 0
         }
+    }
+    // method to run when table view cell is tapped
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        selectedRow = indexPath.row
+        // Segue to the second view controller
+        self.performSegue(withIdentifier: "tweetSegue", sender: self)
+    }
+    
+    // This function is called before the segue
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        // get a reference to the second view controller
+        let secondViewController = segue.destination as! TweetsTableViewController
+        
+        // set a variable in the second view controller with the data to pass
+        secondViewController.twitterAccount = twitterProfileList[selectedRow]
     }
 }
 

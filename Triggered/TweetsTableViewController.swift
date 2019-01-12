@@ -13,7 +13,7 @@ class TweetsTableViewController: UITableViewController {
     
     var tweetsArray: [String] = []
     var htmlContent = "" //html crap
-    var testUserName = "realDonaldTrump"
+    var twitterAccount: profile = profile(profileName: "", party: "", profileImage: "")
     var tweetArray: [String] = [""]
     
     func webScrape(userName: String) {
@@ -38,18 +38,30 @@ class TweetsTableViewController: UITableViewController {
                 do {
                     var tweetNumber = 4 //the first number in the array
                     while (tweetNumber <= ((tweetTextArray.count) - 20)) {
+                       
+                        //avoids text that is meant to be hidden
+                        if ((try tweetTextArray[tweetNumber].attr("class")) == "u-hiddenVisually") {
+                            tweetNumber += 1
+                            }
+                    
+                        //extracts the text from the element in the array
                         var text = try tweetTextArray[tweetNumber].text()
                         
-                            //replaces â with a quote
+                        
+                        
+                        
+                            //replaces â with a quotation mark
                             if text.contains("â")
                             {
                                 text = text.replacingOccurrences(of: "â", with: "\"", options: .literal, range: nil)
                             }
+
                             
-                        
+                        //adds the tweet text to an array
                         tweetArray.append(text)
                         tweetNumber += 1
                     }
+                    //removes empty string at beginning of array
                     tweetArray.remove(at: 0)
                 }
             }
@@ -65,7 +77,9 @@ class TweetsTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        webScrape(userName: testUserName)
+        tableView.rowHeight = UITableView.automaticDimension
+        tableView.estimatedRowHeight = 124
+        webScrape(userName: twitterAccount.profileName)
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -75,6 +89,7 @@ class TweetsTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "tweetCell", for: indexPath)
         let profile = tweetArray[indexPath.row]
+        cell.textLabel?.numberOfLines = 0
         cell.textLabel?.text = "\(tweetArray[(indexPath.row)])"
         return cell
         

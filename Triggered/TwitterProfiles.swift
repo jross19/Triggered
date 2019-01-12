@@ -11,4 +11,15 @@ import Foundation
 struct profile {
     var profileName: String
     var party: String
+    var profileImage: String
+}
+
+func getRepublicanProfiles() -> [profile] {
+    var accounts: [profile] = []
+    let trump: profile = profile(profileName: "realDonaldTrump", party: "Republican", profileImage: "Trump.jpg")
+    let romney: profile = profile(profileName: "SenatorRomney", party: "Republican", profileImage: "Romney.jpg")
+    accounts.append(trump)
+    accounts.append(romney)
+    
+    return accounts
 }
