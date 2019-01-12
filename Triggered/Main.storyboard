@@ -240,4 +240,5 @@
     <inferredMetricsTieBreakers>
         <segue reference="Cyz-8a-RV1"/>
     </inferredMetricsTieBreakers>
+    <color key="tintColor" name="systemPurpleColor" catalog="System" colorSpace="catalog"/>
 </document>

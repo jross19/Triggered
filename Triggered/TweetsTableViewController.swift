@@ -42,9 +42,15 @@ class TweetsTableViewController: UITableViewController {
                     while (tweetNumber <= ((tweetTextArray.count) - 20)) {
                        
                         //avoids text that is meant to be hidden
-                        if ((try tweetTextArray[tweetNumber].attr("class")) == "u-hiddenVisually") {
+                        let v = 0
+                        while (v > -1 ) {
+                            if ((try tweetTextArray[tweetNumber].attr("class")) == "u-hiddenVisually") {
                             tweetNumber += 1
                             }
+                            else {
+                                break
+                            }
+                        }
                     
                         //extracts the text from the element in the array
                         var text = try tweetTextArray[tweetNumber].text()
