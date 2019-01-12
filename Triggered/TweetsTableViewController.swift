@@ -10,7 +10,9 @@ import UIKit
 import SwiftSoup
 
 class TweetsTableViewController: UITableViewController {
+    @IBOutlet weak var navTitle: UINavigationItem!
     
+    var selectedRow: Int = 0
     var tweetsArray: [String] = []
     var htmlContent = "" //html crap
     var twitterAccount: profile = profile(profileName: "", party: "", profileImage: "")
@@ -77,6 +79,7 @@ class TweetsTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        navTitle.title = twitterAccount.profileName
         tableView.rowHeight = UITableView.automaticDimension
         tableView.estimatedRowHeight = 124
         webScrape(userName: twitterAccount.profileName)
@@ -88,7 +91,6 @@ class TweetsTableViewController: UITableViewController {
     }
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "tweetCell", for: indexPath)
-        let profile = tweetArray[indexPath.row]
         cell.textLabel?.numberOfLines = 0
         cell.textLabel?.text = "\(tweetArray[(indexPath.row)])"
         return cell
@@ -107,6 +109,18 @@ class TweetsTableViewController: UITableViewController {
         } else {
             return 0
         }
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        selectedRow = indexPath.row
+        // Segue to the second view controller
+        self.performSegue(withIdentifier: "detailSegue", sender: self)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let controller = segue.destination as! DetailViewController
+        controller.politician = twitterAccount
+        controller.tweetText = tweetArray[selectedRow]
     }
 }
    

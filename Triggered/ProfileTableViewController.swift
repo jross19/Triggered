@@ -9,6 +9,8 @@
 import UIKit
 
 class ProfileTableViewController: UITableViewController {
+    @IBOutlet weak var navTitle: UINavigationItem!
+    
     var selectedRow = 0
     
     var twitterProfileList: [profile] =
@@ -16,6 +18,9 @@ class ProfileTableViewController: UITableViewController {
    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //sets the navigation title
+        navTitle.title = "I hope you hate \(twitterProfileList[0].party)s!"
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false

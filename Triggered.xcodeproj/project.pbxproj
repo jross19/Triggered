@@ -19,6 +19,7 @@
 		FC81E7D021BF236600773A80 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC81E7CF21BF236600773A80 /* AppDelegate.swift */; };
 		FC81E7D721BF236800773A80 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC81E7D621BF236700773A80 /* Assets.xcassets */; };
 		FC81E7DA21BF236800773A80 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC81E7D821BF236800773A80 /* LaunchScreen.storyboard */; };
+		FC948FF721E97CF60053FE69 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC948FF621E97CF60053FE69 /* DetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +38,7 @@
 		FC81E7D621BF236700773A80 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FC81E7D921BF236800773A80 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FC81E7DB21BF236800773A80 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FC948FF621E97CF60053FE69 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		FCA19DE80C30FEB75987D474 /* Pods-Triggered.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Triggered.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Triggered/Pods-Triggered.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -105,6 +107,7 @@
 				AFDA788C21C2CDC400FC3BCC /* TwitterProfiles.swift */,
 				8A67502821DE73670095CE2A /* Tweets.swift */,
 				AF859E5F21E8D26C00866606 /* Main.storyboard */,
+				FC948FF621E97CF60053FE69 /* DetailViewController.swift */,
 				8A20D2BC21C15F5A004EFFCD /* Web Parse.swift */,
 				FC6801BC21E829F70062D760 /* PartyViewController.swift */,
 				FC81E7D821BF236800773A80 /* LaunchScreen.storyboard */,
@@ -242,6 +245,7 @@
 				8A67502921DE73670095CE2A /* Tweets.swift in Sources */,
 				8A00A05421E52FA70013C491 /* TweetsTableViewController.swift in Sources */,
 				FC81E7D021BF236600773A80 /* AppDelegate.swift in Sources */,
+				FC948FF721E97CF60053FE69 /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

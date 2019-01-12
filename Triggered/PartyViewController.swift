@@ -21,7 +21,25 @@ class PartyViewController: UIViewController {
         view.layer.insertSublayer(gradient, at: 0)
     }
     
-
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let controller = segue.destination as! ProfileTableViewController
+        if (segue.identifier == "Republican") {
+            controller.twitterProfileList = getRepublicanProfiles()
+        }
+        
+        if (segue.identifier == "Democrat") {
+            controller.twitterProfileList = getDemocratProfiles()
+        }
+    }
+    
+    @IBAction func democratSelected(_ sender: Any) {
+        performSegue(withIdentifier: "Republican", sender: self)
+    }
+    
+    @IBAction func republicanSelected(_ sender: Any) {
+        performSegue(withIdentifier: "Democrat", sender: self)
+    }
+    
     /*
     // MARK: - Navigation
 
