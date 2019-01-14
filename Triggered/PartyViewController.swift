@@ -9,10 +9,10 @@
 import UIKit
 
 class PartyViewController: UIViewController {
-
+    @IBOutlet weak var navTitle: UINavigationItem!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         //Sets the background color to a gradient
         //let view = UIView(frame: CGRect(x: 0, y: 0, width: 320, height: 50))
         let gradient = CAGradientLayer()

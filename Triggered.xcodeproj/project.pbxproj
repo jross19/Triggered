@@ -15,7 +15,7 @@
 		AFDA788B21C2CA4C00FC3BCC /* ProfileTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFDA788A21C2CA4C00FC3BCC /* ProfileTableViewController.swift */; };
 		AFDA788D21C2CDC400FC3BCC /* TwitterProfiles.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFDA788C21C2CDC400FC3BCC /* TwitterProfiles.swift */; };
 		FC6801BD21E829F70062D760 /* PartyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC6801BC21E829F70062D760 /* PartyViewController.swift */; };
-		FC6801BF21E82E460062D760 /* Call of Ops Duty.otf in Resources */ = {isa = PBXBuildFile; fileRef = FC6801BE21E82E460062D760 /* Call of Ops Duty.otf */; };
+		FC6801BF21E82E460062D760 /* CallofOpsDuty.otf in Resources */ = {isa = PBXBuildFile; fileRef = FC6801BE21E82E460062D760 /* CallofOpsDuty.otf */; };
 		FC81E7D021BF236600773A80 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC81E7CF21BF236600773A80 /* AppDelegate.swift */; };
 		FC81E7D721BF236800773A80 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC81E7D621BF236700773A80 /* Assets.xcassets */; };
 		FC81E7DA21BF236800773A80 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC81E7D821BF236800773A80 /* LaunchScreen.storyboard */; };
@@ -32,7 +32,7 @@
 		AFDA788C21C2CDC400FC3BCC /* TwitterProfiles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwitterProfiles.swift; sourceTree = "<group>"; };
 		F17E16249A56B9B877C00F14 /* Pods_Triggered.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Triggered.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC6801BC21E829F70062D760 /* PartyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartyViewController.swift; sourceTree = "<group>"; };
-		FC6801BE21E82E460062D760 /* Call of Ops Duty.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Call of Ops Duty.otf"; sourceTree = "<group>"; };
+		FC6801BE21E82E460062D760 /* CallofOpsDuty.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = CallofOpsDuty.otf; sourceTree = "<group>"; };
 		FC81E7CC21BF236600773A80 /* Triggered.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Triggered.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC81E7CF21BF236600773A80 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FC81E7D621BF236700773A80 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -74,7 +74,7 @@
 		FC6801C021E82E540062D760 /* Custom Fonts */ = {
 			isa = PBXGroup;
 			children = (
-				FC6801BE21E82E460062D760 /* Call of Ops Duty.otf */,
+				FC6801BE21E82E460062D760 /* CallofOpsDuty.otf */,
 			);
 			path = "Custom Fonts";
 			sourceTree = "<group>";
@@ -177,7 +177,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FC6801BF21E82E460062D760 /* Call of Ops Duty.otf in Resources */,
+				FC6801BF21E82E460062D760 /* CallofOpsDuty.otf in Resources */,
 				FC81E7DA21BF236800773A80 /* LaunchScreen.storyboard in Resources */,
 				FC81E7D721BF236800773A80 /* Assets.xcassets in Resources */,
 				AF859E6021E8D26C00866606 /* Main.storyboard in Resources */,

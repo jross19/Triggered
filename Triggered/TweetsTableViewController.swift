@@ -17,6 +17,7 @@ class TweetsTableViewController: UITableViewController {
     var htmlContent = "" //html crap
     var twitterAccount: profile = profile(profileName: "", party: "", profileImage: "")
     var tweetArray: [String] = [""]
+    var imageLink: String = ""
     
     func webScrape(userName: String) {
         let myURLString = "https://twitter.com/\(userName)"
@@ -53,7 +54,15 @@ class TweetsTableViewController: UITableViewController {
                         }
                     
                         //extracts the text from the element in the array
-                        var text = try tweetTextArray[tweetNumber].text()
+                        var text = ""
+                        
+                        while (text.isEmpty)
+                        {
+                         text = try checkForPic(tweetText: tweetTextArray[tweetNumber].text())
+                            if (text.isEmpty) {
+                                tweetNumber += 1
+                            }
+                        }
                         
                         
                         
@@ -127,6 +136,25 @@ class TweetsTableViewController: UITableViewController {
         let controller = segue.destination as! DetailViewController
         controller.politician = twitterAccount
         controller.tweetText = tweetArray[selectedRow]
+    }
+    
+    func checkForPic(tweetText: String) -> String {
+        var tweet = tweetText
+        if tweet.contains("pic.twitter.com") {
+            var i = tweet.range(of: "pic.twitter.com")
+            var index = i?.lowerBound
+            imageLink = tweet.substring(from: index!)
+            tweet = tweet.substring(to: index!)
+            return tweet
+        }
+        else {
+            return tweet
+        }
+    }
+    
+    func checkForBlank(tweetText: String) -> Bool {
+        return tweetText.isEmpty
+        
     }
 }
    
