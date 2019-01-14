@@ -72,14 +72,23 @@ class TweetsTableViewController: UITableViewController {
                             {
                                 text = text.replacingOccurrences(of: "â", with: "\"", options: .literal, range: nil)
                             }
+                        
+                            //deletes a mistaken tweet
+                        
 
                             
                         //adds the tweet text to an array
+                        
                         tweetArray.append(text)
                         tweetNumber += 1
                     }
                     //removes empty string at beginning of array
                     tweetArray.remove(at: 0)
+                    
+                    //removes messy stuff at end of array
+                    if (tweetArray[(tweetArray.count) - 1] == "@\(userName) hasn't Tweeted yet.") {
+                        tweetArray.remove(at: (tweetArray.count) - 1)
+                    }
                 }
             }
             catch {
