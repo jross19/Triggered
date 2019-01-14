@@ -32,9 +32,11 @@ func getDemocratProfiles() -> [profile] {
     let bClinton: profile = profile(profileName: "BillClinton", party: "Democrat", profileImage: "bClinton.jpg")
     let bShapiro = profile(profileName: "BenShapiro", party: "Democrat", profileImage: "shapiro.jpg")
     let obama = profile(profileName: "BarackObama", party: "Democrat", profileImage: "obama.jpg")
+    let eWarren = profile(profileName: "SenWarren", party: "Democrat", profileImage: "warren.jpg")
     accounts.append(hClinton)
     accounts.append(bClinton)
     accounts.append(bShapiro)
     accounts.append(obama)
+    accounts.append(eWarren)
     return accounts
 }
