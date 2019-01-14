@@ -18,8 +18,10 @@ func getRepublicanProfiles() -> [profile] {
     var accounts: [profile] = []
     let trump: profile = profile(profileName: "realDonaldTrump", party: "Republican", profileImage: "Trump.jpg")
     let romney: profile = profile(profileName: "SenatorRomney", party: "Republican", profileImage: "Romney.jpg")
+    let west = profile(profileName: "kanyewest", party: "Republican", profileImage: "west.jpg")
     accounts.append(trump)
     accounts.append(romney)
+    accounts.append(west)
     
     return accounts
 }
