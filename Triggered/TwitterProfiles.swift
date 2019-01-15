@@ -40,6 +40,9 @@ func getDemocratProfiles() -> [profile] {
     let eWarren = profile(profileName: "SenWarren", party: "Democrat", profileImage: "warren.jpg")
     let nyTimes = profile(profileName: "nytimes", party: "Democrat", profileImage: "nyTimes.jpg")
     let bSanders = profile(profileName: "SenSanders", party: "Democrat", profileImage: "bSanders.jpg")
+    let nPelosi = profile(profileName: "SpeakerPelosi", party: "Democrat", profileImage: "nPelosi.jpg")
+    let cSchumer = profile(profileName: "SenSchumer", party: "Democrat", profileImage: "cSchumer.jpg")
+    let kHarris = profile(profileName: "KamalaHarris", party: "Democrat", profileImage: "kHarris.jpg")
     accounts.append(hClinton)
     accounts.append(nyTimes)
     accounts.append(bClinton)
@@ -47,5 +50,8 @@ func getDemocratProfiles() -> [profile] {
     accounts.append(eWarren)
     accounts.append(CNN)
     accounts.append(bSanders)
+    accounts.append(nPelosi)
+    accounts.append(cSchumer)
+    accounts.append(kHarris)
     return accounts
 }
