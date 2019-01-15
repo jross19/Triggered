@@ -22,12 +22,20 @@ func getRepublicanProfiles() -> [profile] {
     let west = profile(profileName: "kanyewest", party: "Republican", profileImage: "west.jpg")
     let sCrowder = profile(profileName: "scrowder", party: "Republican", profileImage: "crowder.jpg")
     let foxNews = profile(profileName: "FoxNews", party: "Republican", profileImage: "FoxNews.jpg")
+    let mPence = profile(profileName: "mike_pence", party: "Republican", profileImage: "pence.jpg")
+    let kConway = profile(profileName: "KellyannePolls", party: "Republican", profileImage: "conway.jpg")
+    let tCarlson = profile(profileName: "tuckercarlson", party: "Republican", profileImage: "Carlson.jpg")
+    let reilly = profile(profileName: "BillOReilly", party: "Republican", profileImage: "oreilly.jpg")
     accounts.append(trump)
     accounts.append(romney)
     accounts.append(west)
     accounts.append(bShapiro)
     accounts.append(sCrowder)
     accounts.append(foxNews)
+    accounts.append(mPence)
+    accounts.append(kConway)
+    accounts.append(tCarlson)
+    accounts.append(reilly)
     return accounts
 }
 
