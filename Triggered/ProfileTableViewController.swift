@@ -20,7 +20,7 @@ class ProfileTableViewController: UITableViewController {
         super.viewDidLoad()
         
         //sets the navigation title
-        navTitle.title = "I hope you hate \(twitterProfileList[0].party)s!"
+        navTitle.title = "Twitter users from the \(twitterProfileList[0].party) party!"
 
        
     }
