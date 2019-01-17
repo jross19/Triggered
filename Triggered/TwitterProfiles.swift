@@ -8,12 +8,13 @@
 
 import Foundation
 
+// The struct used to initialize the basis of information needed for web parsing
 struct profile {
     var profileName: String
     var party: String
     var profileImage: String
 }
-
+// The stored list of Republican Twitter profiles
 func getRepublicanProfiles() -> [profile] {
     var accounts: [profile] = []
     let trump: profile = profile(profileName: "realDonaldTrump", party: "Republican", profileImage: "Trump.jpg")
@@ -39,6 +40,7 @@ func getRepublicanProfiles() -> [profile] {
     return accounts
 }
 
+// The stored list of Democrat Twitter profiles
 func getDemocratProfiles() -> [profile] {
     var accounts: [profile] = []
     let hClinton = profile(profileName: "HillaryClinton", party: "Democrat", profileImage: "clinton.jpg")

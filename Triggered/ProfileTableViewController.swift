@@ -13,6 +13,7 @@ class ProfileTableViewController: UITableViewController {
     
     var selectedRow = 0
     
+    // The array of twitter profiles used to get the republican profiles
     var twitterProfileList: [profile] =
         getRepublicanProfiles()
    
@@ -36,11 +37,12 @@ class ProfileTableViewController: UITableViewController {
     }
     
     
-    
+    // Initializes the number of sections in the table view
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
     
+    //Initializes the number of rows per section
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if section == 0 {
             return twitterProfileList.count

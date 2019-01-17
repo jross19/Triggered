@@ -14,13 +14,13 @@ class PartyViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         //Sets the background color to a gradient
-        //let view = UIView(frame: CGRect(x: 0, y: 0, width: 320, height: 50))
         let gradient = CAGradientLayer()
         gradient.frame = self.view.bounds
         gradient.colors = [UIColor.red.cgColor, UIColor.green.cgColor]
         view.layer.insertSublayer(gradient, at: 0)
     }
     
+    //Checks if user taps on republican icon or democrat icon
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let controller = segue.destination as! ProfileTableViewController
         if (segue.identifier == "Republican") {
