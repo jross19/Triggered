@@ -12,13 +12,14 @@ import SwiftSoup
 class TweetsTableViewController: UITableViewController {
     @IBOutlet weak var navTitle: UINavigationItem!
     
-    var selectedRow: Int = 0
-    var tweetsArray: [String] = []
-    var htmlContent = "" //html crap
-    var twitterAccount: profile = profile(profileName: "", party: "", profileImage: "")
-    var tweetArray: [String] = [""]
-    var imageLink: String = ""
+    var selectedRow: Int = 0 //Saves the row that the user clicked
+    var htmlContent = "" //stores all of the html document
+    var twitterAccount: profile = profile(profileName: "", party: "", profileImage: "") //stores the twitter account, passed from previous ViewController
+    var tweetArray: [String] = [""] //Saves an array of all the tweets from one user
+    var imageLink: String = "" //store the pic.twitter.com link
     
+    
+     //Function that takes in a String for the username of the twitter account and stores the text of the user's tweets in an array
     func webScrape(userName: String) {
         let myURLString = "https://twitter.com/\(userName)"
         guard let myURL = URL(string: myURLString) else {
@@ -27,21 +28,21 @@ class TweetsTableViewController: UITableViewController {
         }
         
         do {
-            htmlContent = try String(contentsOf: myURL, encoding: .ascii)
-            //print("HTML : \(htmlContent)")
+            htmlContent = try String(contentsOf: myURL, encoding: .ascii) //gets the html content of the webpage
         } catch let error {
+            //prints error if there is an error getting content from the url
             print("Error: \(error)")
         }
         
         
         do {
-            let doc = try SwiftSoup.parse(htmlContent)
+            let doc = try SwiftSoup.parse(htmlContent) //parses the webpage
             do {
-                let tweetTextArray = try doc.select("p").array()
+                let tweetTextArray = try doc.select("p").array() //creates an array of text with tag p
                 do {
-                    var tweetNumber = 4 //the first number in the array
-                    while (tweetNumber <= ((tweetTextArray.count) - 20)) {
-                       
+                    var tweetNumber = 4 //the first number in the array (using 4 because that is where the tweets start)
+                    while (tweetNumber <= ((tweetTextArray.count) - 20)) { //loops through tweets on first page load
+                        
                         //avoids text that is meant to be hidden
                         let v = 0
                         while (v > -1 ) {
@@ -73,10 +74,7 @@ class TweetsTableViewController: UITableViewController {
                                 text = text.replacingOccurrences(of: "â", with: "\"", options: .literal, range: nil)
                             }
                         
-                            //deletes a mistaken tweet
-                        
 
-                            
                         //adds the tweet text to an array
                         
                         tweetArray.append(text)
@@ -102,16 +100,12 @@ class TweetsTableViewController: UITableViewController {
 
 
     override func viewDidLoad() {
+        //sets up the ViewController, running all of the functions required to display tweets
         super.viewDidLoad()
         navTitle.title = twitterAccount.profileName
         tableView.rowHeight = UITableView.automaticDimension
         tableView.estimatedRowHeight = 124
         webScrape(userName: twitterAccount.profileName)
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "tweetCell", for: indexPath)
