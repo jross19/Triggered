@@ -32,10 +32,12 @@ class PartyViewController: UIViewController {
         }
     }
     
+    // Performs the Republican segue
     @IBAction func democratSelected(_ sender: Any) {
         performSegue(withIdentifier: "Republican", sender: self)
     }
     
+    // Performs the Democrat segue
     @IBAction func republicanSelected(_ sender: Any) {
         performSegue(withIdentifier: "Democrat", sender: self)
     }
