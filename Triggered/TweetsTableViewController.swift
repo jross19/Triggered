@@ -149,11 +149,13 @@ class TweetsTableViewController: UITableViewController {
     
     func checkForPic(tweetText: String) -> String {
         var tweet = tweetText
-        if tweet.contains("pic.twitter.com") {
-            var i = tweet.range(of: "pic.twitter.com")
-            var index = i?.lowerBound
-            imageLink = tweet.substring(from: index!)
-            tweet = tweet.substring(to: index!)
+        if tweet.contains("pic.twitter.com") //checkes if the tweet contains a pic.twitter.com link
+        {
+            let i = tweet.range(of: "pic.twitter.com") //gets the range of the pic link
+            let index = i?.lowerBound //gets the first index of the link
+            imageLink = tweet.substring(from: index!) //gets the text of the link
+            tweet = tweet.substring(to: index!) //changes the detail text to everything before the pic link
+            
             return tweet
         }
         else {
@@ -161,6 +163,7 @@ class TweetsTableViewController: UITableViewController {
         }
     }
     
+    //checks if the tweet text is empty
     func checkForBlank(tweetText: String) -> Bool {
         return tweetText.isEmpty
         

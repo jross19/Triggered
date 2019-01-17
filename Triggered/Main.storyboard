@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ztQ-V0-Fxx">
-    <device id="retina4_7" orientation="portrait">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ztQ-V0-Fxx">
+    <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -15,27 +15,59 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="PartyViewController" customModule="Triggered" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ral-Ox-lro">
-                                <rect key="frame" x="70" y="64" width="235" height="231"/>
+                                <rect key="frame" x="89.666666666666686" y="64" width="235" height="231"/>
                                 <constraints>
+                                    <constraint firstAttribute="width" constant="235" id="XeJ-CW-98E"/>
                                     <constraint firstAttribute="width" constant="235" id="bgY-AC-Gt4"/>
                                     <constraint firstAttribute="height" constant="231" id="iXB-Fs-Vi3"/>
+                                    <constraint firstAttribute="height" constant="231" id="k2f-dv-5Um"/>
                                 </constraints>
                                 <state key="normal" title="Democrat" image="democratic-donkey-vector-logo"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="XeJ-CW-98E"/>
+                                        <exclude reference="k2f-dv-5Um"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="XeJ-CW-98E"/>
+                                        <exclude reference="bgY-AC-Gt4"/>
+                                        <exclude reference="iXB-Fs-Vi3"/>
+                                        <include reference="k2f-dv-5Um"/>
+                                    </mask>
+                                </variation>
                                 <connections>
                                     <action selector="democratSelected:" destination="BYZ-38-t0r" eventType="touchUpInside" id="drA-QE-hJr"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZUu-t2-wHR">
-                                <rect key="frame" x="69.5" y="442" width="236" height="205"/>
+                                <rect key="frame" x="89" y="511" width="236" height="205"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="236" id="A9u-cR-XuY"/>
+                                    <constraint firstAttribute="width" constant="236" id="VgS-BH-rH6"/>
                                     <constraint firstAttribute="height" constant="205" id="ggX-K2-7Nt"/>
+                                    <constraint firstAttribute="height" constant="205" id="ogh-It-hhw"/>
                                 </constraints>
                                 <state key="normal" title="Republican" image="Republicanlogo.svg"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="VgS-BH-rH6"/>
+                                        <exclude reference="ogh-It-hhw"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=compact">
+                                    <mask key="constraints">
+                                        <exclude reference="A9u-cR-XuY"/>
+                                        <include reference="VgS-BH-rH6"/>
+                                        <exclude reference="ggX-K2-7Nt"/>
+                                        <include reference="ogh-It-hhw"/>
+                                    </mask>
+                                </variation>
                                 <connections>
                                     <action selector="republicanSelected:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rQE-aS-eW2"/>
                                 </connections>
@@ -44,11 +76,41 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="ral-Ox-lro" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="4N8-lb-j5B"/>
-                            <constraint firstItem="ZUu-t2-wHR" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Oxk-x5-bnZ"/>
-                            <constraint firstItem="ral-Ox-lro" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="jYu-aP-bFx"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="ZUu-t2-wHR" secondAttribute="bottom" constant="20" id="xp5-VV-rDl"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ZUu-t2-wHR" secondAttribute="trailing" id="B8Y-0J-dnR"/>
+                            <constraint firstItem="ZUu-t2-wHR" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="OrF-Ac-7nf"/>
+                            <constraint firstItem="ZUu-t2-wHR" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Oxk-x5-bnZ">
+                                <variation key="heightClass=compact" constant="195.5"/>
+                            </constraint>
+                            <constraint firstItem="ral-Ox-lro" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="h7n-7z-4sx"/>
+                            <constraint firstItem="ral-Ox-lro" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="jYu-aP-bFx">
+                                <variation key="heightClass=compact" constant="-166.5"/>
+                            </constraint>
+                            <constraint firstItem="ral-Ox-lro" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="qKM-36-8aX"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="ZUu-t2-wHR" secondAttribute="bottom" constant="20" id="xp5-VV-rDl">
+                                <variation key="heightClass=compact" constant="72"/>
+                            </constraint>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="B8Y-0J-dnR"/>
+                                <exclude reference="h7n-7z-4sx"/>
+                                <exclude reference="qKM-36-8aX"/>
+                                <exclude reference="OrF-Ac-7nf"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=compact">
+                            <mask key="constraints">
+                                <include reference="B8Y-0J-dnR"/>
+                                <exclude reference="xp5-VV-rDl"/>
+                                <exclude reference="4N8-lb-j5B"/>
+                                <include reference="h7n-7z-4sx"/>
+                                <exclude reference="jYu-aP-bFx"/>
+                                <include reference="qKM-36-8aX"/>
+                                <include reference="OrF-Ac-7nf"/>
+                                <exclude reference="Oxk-x5-bnZ"/>
+                            </mask>
+                        </variation>
                     </view>
                     <navigationItem key="navigationItem" title="Choose Your Party!" largeTitleDisplayMode="always" id="EFI-Kf-vDc"/>
                     <connections>
@@ -66,33 +128,33 @@
             <objects>
                 <tableViewController id="W9q-iq-Dh4" customClass="ProfileTableViewController" customModule="Triggered" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Jye-LO-WNH">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="TwitterProfileCell" textLabel="0Et-C2-0cM" detailTextLabel="bk9-uR-2vH" imageView="7qA-Vm-JeN" style="IBUITableViewCellStyleSubtitle" id="Kv9-Uk-Rhc">
-                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <rect key="frame" x="0.0" y="28" width="414" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Kv9-Uk-Rhc" id="oae-TX-KHw">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.666666666666664"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="0Et-C2-0cM">
-                                            <rect key="frame" x="81" y="5" width="33.5" height="20.5"/>
+                                            <rect key="frame" x="85" y="5" width="33.333333333333336" height="20.333333333333332"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="bk9-uR-2vH">
-                                            <rect key="frame" x="81" y="25.5" width="44" height="14.5"/>
+                                            <rect key="frame" x="85" y="25.333333333333332" width="43.666666666666664" height="14.333333333333334"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" image="Republicanlogo.svg" id="7qA-Vm-JeN">
-                                            <rect key="frame" x="16" y="0.0" width="50" height="43.5"/>
+                                            <rect key="frame" x="20" y="0.0" width="50" height="43.666666666666664"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </imageView>
                                     </subviews>
@@ -122,15 +184,15 @@
             <objects>
                 <tableViewController id="tJb-2n-kE3" customClass="TweetsTableViewController" customModule="Triggered" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="9d1-ku-GnM">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="tweetCell" rowHeight="44" id="BV7-1b-ieL">
-                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <rect key="frame" x="0.0" y="28" width="414" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="BV7-1b-ieL" id="c7e-e7-akF">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.666666666666664"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -156,7 +218,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ztQ-V0-Fxx" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="1AG-SJ-T8d">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -173,7 +235,7 @@
             <objects>
                 <viewController id="9Cq-cX-vUc" customClass="DetailViewController" customModule="Triggered" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ocv-jh-M2U">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Jf4-Zf-7uS">
@@ -184,13 +246,13 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xnk-ox-cB2">
-                                <rect key="frame" x="108" y="79" width="267" height="30"/>
+                                <rect key="frame" x="108" y="79" width="306" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iTK-tA-E6P">
-                                <rect key="frame" x="0.0" y="164" width="375" height="275"/>
+                                <rect key="frame" x="0.0" y="164" width="414" height="275"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="275" id="mbH-e0-I5c"/>
@@ -199,31 +261,21 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Btk-e3-ail">
-                                <rect key="frame" x="0.0" y="439" width="375" height="228"/>
-                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="xnk-ox-cB2" firstAttribute="top" secondItem="fq3-q7-GcR" secondAttribute="top" constant="15" id="2Vg-vh-H6x"/>
                             <constraint firstItem="fq3-q7-GcR" firstAttribute="trailing" secondItem="xnk-ox-cB2" secondAttribute="trailing" id="5Wf-zL-I0l"/>
-                            <constraint firstItem="Btk-e3-ail" firstAttribute="top" secondItem="iTK-tA-E6P" secondAttribute="bottom" id="Ben-Mt-OqK"/>
-                            <constraint firstItem="Btk-e3-ail" firstAttribute="leading" secondItem="fq3-q7-GcR" secondAttribute="leading" id="DO2-xq-oZk"/>
                             <constraint firstItem="fq3-q7-GcR" firstAttribute="trailing" secondItem="iTK-tA-E6P" secondAttribute="trailing" id="Ere-zO-5Bo"/>
                             <constraint firstItem="iTK-tA-E6P" firstAttribute="leading" secondItem="fq3-q7-GcR" secondAttribute="leading" id="InP-MO-4lc"/>
-                            <constraint firstItem="Btk-e3-ail" firstAttribute="centerX" secondItem="Ocv-jh-M2U" secondAttribute="centerX" id="NyJ-k9-lL9"/>
-                            <constraint firstItem="Btk-e3-ail" firstAttribute="bottom" secondItem="fq3-q7-GcR" secondAttribute="bottom" id="Sc2-CY-ABh"/>
                             <constraint firstItem="Jf4-Zf-7uS" firstAttribute="leading" secondItem="fq3-q7-GcR" secondAttribute="leading" id="T1W-Jp-daw"/>
                             <constraint firstItem="iTK-tA-E6P" firstAttribute="top" secondItem="Jf4-Zf-7uS" secondAttribute="bottom" id="kwi-R1-kgZ"/>
                             <constraint firstItem="Jf4-Zf-7uS" firstAttribute="top" secondItem="fq3-q7-GcR" secondAttribute="top" id="lRO-S9-ONw"/>
-                            <constraint firstItem="fq3-q7-GcR" firstAttribute="trailing" secondItem="Btk-e3-ail" secondAttribute="trailing" id="qcJ-Rg-H9U"/>
-                            <constraint firstItem="Btk-e3-ail" firstAttribute="bottom" secondItem="fq3-q7-GcR" secondAttribute="bottom" id="vwq-5E-Tgc"/>
                             <constraint firstItem="xnk-ox-cB2" firstAttribute="leading" secondItem="Jf4-Zf-7uS" secondAttribute="trailing" constant="8" id="w0l-G1-fUm"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="fq3-q7-GcR"/>
                     </view>
                     <connections>
-                        <outlet property="contentImage" destination="Btk-e3-ail" id="hlw-dB-A2k"/>
                         <outlet property="profileImage" destination="Jf4-Zf-7uS" id="Rs4-D4-8eT"/>
                         <outlet property="profileName" destination="xnk-ox-cB2" id="ORV-LV-D6l"/>
                         <outlet property="tweetView" destination="iTK-tA-E6P" id="4Ya-yR-aRT"/>

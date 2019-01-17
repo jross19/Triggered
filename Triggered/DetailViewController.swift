@@ -10,38 +10,41 @@ import UIKit
 import SwiftSoup
 
 class DetailViewController: UIViewController {
+    //Outlets for content of the page
     @IBOutlet weak var profileImage: UIImageView!
     @IBOutlet weak var profileName: UILabel!
     @IBOutlet weak var tweetView: UITextView!
-    @IBOutlet weak var contentImage: UIImageView!
+    @IBOutlet weak var contentImage: UIImageView! //This image view is not currently used
     
-    var htmlContent = "" //html crap
-    
+    //stores the content of the politician, which is provided by the previous ViewController
     var politician: profile = profile(profileName: "", party: "", profileImage: "")
     
+    //stores the text of the tweet, provided by last ViewController
     var tweetText = ""
     
+    //used in the checkForPic function to store a pic.twitter.com link
     var imageLink: String = ""
     
+    //sets up the ViewController
     override func viewDidLoad() {
         super.viewDidLoad()
-        profileName.text = politician.profileName
-        profileImage.image = UIImage(named: politician.profileImage)
-        tweetView.text = checkForPic(tweetText: tweetText)
+        profileName.text = politician.profileName //extracts the profile name and stores it
+        profileImage.image = UIImage(named: politician.profileImage) //extracts the profile image and stores it
+        tweetView.text = checkForPic(tweetText: tweetText) //removes pic.twitter.com from the tweet
 
         // Do any additional setup after loading the view.
     }
     
                 
-           
+           //removes the pic.twitter.com links from the tweet
             func checkForPic(tweetText: String) -> String {
                 var tweet = tweetText
-                if tweet.contains("pic.twitter.com")
+                if tweet.contains("pic.twitter.com") //checkes if the tweet contains a pic.twitter.com link
                 {
-                    var i = tweet.range(of: "pic.twitter.com")
-                    var index = i?.lowerBound
-                    imageLink = tweet.substring(from: index!)
-                    tweet = tweet.substring(to: index!)
+                    let i = tweet.range(of: "pic.twitter.com") //gets the range of the pic link
+                    let index = i?.lowerBound //gets the first index of the link
+                    imageLink = tweet.substring(from: index!) //gets the text of the link
+                    tweet = tweet.substring(to: index!) //changes the detail text to everything before the pic link
                     
                     return tweet
                 }
