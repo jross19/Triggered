@@ -13,11 +13,6 @@ class PartyViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //Sets the background color to a gradient
-        let gradient = CAGradientLayer()
-        gradient.frame = self.view.bounds
-        gradient.colors = [UIColor.red.cgColor, UIColor.green.cgColor]
-        view.layer.insertSublayer(gradient, at: 0)
     }
     
     //Checks if user taps on republican icon or democrat icon
