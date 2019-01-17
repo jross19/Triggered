@@ -107,6 +107,7 @@ class TweetsTableViewController: UITableViewController {
         tableView.estimatedRowHeight = 124
         webScrape(userName: twitterAccount.profileName)
     }
+    //sets up the tableView
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "tweetCell", for: indexPath)
         cell.textLabel?.numberOfLines = 0
@@ -120,7 +121,7 @@ class TweetsTableViewController: UITableViewController {
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
-    
+    //gets the count of the cells
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if section == 0 {
             return tweetArray.count
@@ -129,12 +130,14 @@ class TweetsTableViewController: UITableViewController {
         }
     }
     
+    //allows segue when row is clicked
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         selectedRow = indexPath.row
         // Segue to the second view controller
         self.performSegue(withIdentifier: "detailSegue", sender: self)
     }
     
+    //prepares for segue and pushes required values to next viewController
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let controller = segue.destination as! DetailViewController
         controller.politician = twitterAccount
