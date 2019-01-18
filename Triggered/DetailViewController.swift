@@ -47,8 +47,8 @@ class DetailViewController: UIViewController {
                 {
                     let i = tweet.range(of: "pic.twitter.com") //gets the range of the pic link
                     let index = i?.lowerBound //gets the first index of the link
-                    imageLink = tweet.substring(from: index!) //gets the text of the link
-                    tweet = tweet.substring(to: index!) //changes the detail text to everything before the pic link
+                    imageLink = String(tweet[index!...]) //gets the text of the link
+                    tweet = String(tweet.prefix(upTo: index!)) //changes the detail text to everything before the pic link
                     
                     return tweet
                 }
