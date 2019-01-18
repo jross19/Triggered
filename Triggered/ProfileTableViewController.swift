@@ -19,6 +19,8 @@ class ProfileTableViewController: UITableViewController {
    
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.tableView.backgroundColor = UIColor(red: 8/255, green: 19/255, blue: 48/255, alpha: 1) //sets background color
+        
         
         //sets the navigation title
         navTitle.title = "Twitter users from the \(twitterProfileList[0].party) party!"
@@ -28,10 +30,13 @@ class ProfileTableViewController: UITableViewController {
     // Initializes the cells
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "TwitterProfileCell", for: indexPath)
+        cell.backgroundColor = UIColor.clear
         let profile = twitterProfileList[indexPath.row]
         cell.imageView?.image = UIImage(named: profile.profileImage)
         cell.textLabel?.text = "\(profile.profileName)"
+        cell.textLabel?.textColor = UIColor.white
         cell.detailTextLabel?.text = "\(profile.party)"
+        cell.detailTextLabel?.textColor = UIColor.white
         return cell
      
     }
@@ -56,6 +61,7 @@ class ProfileTableViewController: UITableViewController {
         // Segue to the second view controller
         self.performSegue(withIdentifier: "tweetSegue", sender: self)
     }
+    
     
     // This function is called before the segue
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

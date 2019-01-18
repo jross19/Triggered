@@ -102,6 +102,7 @@ class TweetsTableViewController: UITableViewController {
     override func viewDidLoad() {
         //sets up the ViewController, running all of the functions required to display tweets
         super.viewDidLoad()
+        self.tableView.backgroundColor = UIColor(red: 8/255, green: 19/255, blue: 48/255, alpha: 1) //sets background color
         navTitle.title = twitterAccount.profileName
         tableView.rowHeight = UITableView.automaticDimension
         tableView.estimatedRowHeight = 124
@@ -110,8 +111,10 @@ class TweetsTableViewController: UITableViewController {
     //sets up the tableView
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "tweetCell", for: indexPath)
+        cell.backgroundColor = UIColor.clear
         cell.textLabel?.numberOfLines = 0
         cell.textLabel?.text = "\(tweetArray[(indexPath.row)])"
+        cell.textLabel?.textColor = UIColor.white
         return cell
         
     }

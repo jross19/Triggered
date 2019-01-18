@@ -28,6 +28,10 @@ class DetailViewController: UIViewController {
     //sets up the ViewController
     override func viewDidLoad() {
         super.viewDidLoad()
+         self.view.backgroundColor = UIColor(red: 8/255, green: 19/255, blue: 48/255, alpha: 1) //sets background color
+        tweetView.textColor = UIColor.white
+        tweetView.backgroundColor = UIColor.clear
+        profileName.textColor = UIColor.white
         profileName.text = politician.profileName //extracts the profile name and stores it
         profileImage.image = UIImage(named: politician.profileImage) //extracts the profile image and stores it
         tweetView.text = checkForPic(tweetText: tweetText) //removes pic.twitter.com from the tweet
